@@ -26,13 +26,7 @@ function App() {
       <GlobalStyle />
       <div className="container">
         <Header favoritos={[]} />
-        <Produtos
-          produtos={[]}
-          favoritos={[]}
-          favoritar={function (): void {
-            throw new Error('Function not implemented.')
-          }}
-        />
+        <Produtos />
       </div>
     </Provider>
   )

@@ -7,7 +7,6 @@ import { adicionarAosFavoritos } from '../../reduxStore/reducer/addFavoritos'
 
 type Props = {
   produto: ProdutoType
-  favoritar: (produto: ProdutoType) => void
   estaNosFavoritos: boolean
 }
 

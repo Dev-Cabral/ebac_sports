@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
 
@@ -16,18 +15,11 @@ export type Produto = {
 }
 
 function App() {
-  const [produtos, setProdutos] = useState<Produto[]>([])
-  const [favoritos] = useState<Produto[]>([])
-
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/ebac_sports')
       .then((res) => res.json())
-      .then((res) => setProdutos(res))
+      .then((res) => Produtos(res))
   }, [])
-
-  function favoritar(_produto: Produto): void {
-    throw new Error('Function not implemented.')
-  }
 
   return (
     <Provider store={store}>
@@ -35,9 +27,11 @@ function App() {
       <div className="container">
         <Header favoritos={[]} />
         <Produtos
-          produtos={produtos}
-          favoritos={favoritos}
-          favoritar={favoritar}
+          produtos={[]}
+          favoritos={[]}
+          favoritar={function (): void {
+            throw new Error('Function not implemented.')
+          }}
         />
       </div>
     </Provider>

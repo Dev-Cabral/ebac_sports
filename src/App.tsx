@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
 
@@ -15,10 +15,11 @@ export type Produtos = {
 }
 
 function App() {
+  const [produtos, setProdutos] = useState([])
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/ebac_sports')
       .then((res) => res.json())
-      .then((res) => Produtos(res))
+      .then((res) => setProdutos(res))
   }, [])
 
   return (
@@ -26,7 +27,7 @@ function App() {
       <GlobalStyle />
       <div className="container">
         <Header favoritos={[]} />
-        <Produtos favoritos={[]} produto={[]} />
+        <Produtos produtos={produtos} favoritos={[]} />
       </div>
     </Provider>
   )

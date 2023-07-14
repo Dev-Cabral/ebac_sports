@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 
 import { store } from './reduxStore'
 
-export type Produto = {
+export type Produtos = {
   id: number
   nome: string
   preco: number
@@ -26,7 +26,7 @@ function App() {
       <GlobalStyle />
       <div className="container">
         <Header favoritos={[]} />
-        <Produtos />
+        <Produtos favoritos={[]} produto={[]} />
       </div>
     </Provider>
   )

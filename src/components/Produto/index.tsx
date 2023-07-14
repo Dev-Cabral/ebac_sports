@@ -1,4 +1,4 @@
-import { Produto as ProdutoType } from '../../App'
+import { Produtos as ProdutoType } from '../../App'
 import { useDispatch } from 'react-redux'
 import * as S from './styles'
 

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import * as S from './styles'
 
-import { Produto } from '../../App'
+import { Produtos } from '../../App'
 
 import cesta from '../../assets/cesta.png'
 import { paraReal } from '../Produto'
@@ -9,7 +9,7 @@ import { paraReal } from '../Produto'
 import { RootReducer } from '../../reduxStore'
 
 type Props = {
-  favoritos: Produto[]
+  favoritos: Produtos[]
 }
 
 const Header = ({ favoritos }: Props) => {

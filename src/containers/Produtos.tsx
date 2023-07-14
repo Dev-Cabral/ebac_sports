@@ -5,16 +5,16 @@ import Produto from '../components/Produto'
 import * as S from './styles'
 
 type Props = {
-  produto: ProdutoType[]
+  produtos: ProdutoType[]
   favoritos: ProdutoType[]
 }
 
-const ProdutosComponent = ({ produto }: Props) => {
+const ProdutosComponent = ({ produtos }: Props) => {
   return (
     <>
       <S.Produtos>
-        {produto.map(() => (
-          <Produto produto={produto} estaNosFavoritos={false} />
+        {produtos.map(() => (
+          <Produto produto={produtos} estaNosFavoritos={false} />
         ))}
       </S.Produtos>
     </>

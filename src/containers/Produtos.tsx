@@ -13,8 +13,8 @@ const ProdutosComponent = ({ produto }: Props) => {
   return (
     <>
       <S.Produtos>
-        {produto.map(() => (
-          <Produto produto={produto} estaNosFavoritos={false} />
+        {produto.map((item) => (
+          <Produto produto={item} estaNosFavoritos={false} />
         ))}
       </S.Produtos>
     </>

@@ -4,12 +4,10 @@ import { Produtos } from '../../App'
 
 type FavoritoState = {
   itens: Produtos[]
-  produto: Produtos[]
 }
 
 const initialState: FavoritoState = {
-  itens: [],
-  produto: []
+  itens: []
 }
 
 const favoritoSlice = createSlice({
